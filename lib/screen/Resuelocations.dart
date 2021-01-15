@@ -34,7 +34,7 @@ class _ResuelocationsState extends State<Resuelocations> {
           ),
         ),
         body: StreamBuilder(
-          stream: Firestore.instance.collection('location').snapshots(),
+          stream: FirebaseFirestore.instance.collection('location').snapshots(),
           builder: (context, snapshot) {
             if (!snapshot.hasData) {
               const Text('Loading');

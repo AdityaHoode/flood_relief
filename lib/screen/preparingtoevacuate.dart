@@ -30,7 +30,7 @@ class preparingtoevacuate extends StatelessWidget {
       ),
       body: StreamBuilder(
         stream:
-            Firestore.instance.collection('Preparing to evacuate').snapshots(),
+            FirebaseFirestore.instance.collection('Preparing to evacuate').snapshots(),
         builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
           if (!snapshot.hasData) {
             return Center(child: Text('Loading...'));

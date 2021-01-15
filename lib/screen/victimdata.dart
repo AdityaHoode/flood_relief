@@ -34,7 +34,7 @@ class _AdmindatapageState extends State<Victimdatapage> {
         ),
       ),
       body: StreamBuilder(
-        stream: Firestore.instance.collection('victim').snapshots(),
+        stream: FirebaseFirestore.instance.collection('victim').snapshots(),
         builder: (context, snapshot) {
           // ignore: missing_return
           if (!snapshot.hasData) {

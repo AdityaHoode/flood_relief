@@ -21,7 +21,7 @@ class _DonorFormScreenState extends State<DonorFormScreen> {
 
   var _Medicine = ['Paracetamol', 'Cetrizine', 'ORS', 'Insulin', 'Others'];
   var _Food = ['Buiscuit', 'Fruits', 'Groceries', 'Others'];
-  var _Dress=['Topwear','Bottomwear','Blanket','Others'];
+  var _Dress = ['Topwear', 'Bottomwear', 'Blanket', 'Others'];
   String _currentFood;
   String _currentMedicine;
   String _currentDress;
@@ -59,7 +59,8 @@ class _DonorFormScreenState extends State<DonorFormScreen> {
 
   Widget _buildEmail() {
     return TextFormField(
-      decoration: InputDecoration(labelText: 'Email',suffixIcon: Icon(Icons.email)),
+      decoration:
+          InputDecoration(labelText: 'Email', suffixIcon: Icon(Icons.email)),
       validator: (String value) {
         if (value.isEmpty) {
           return 'Email is required';
@@ -78,7 +79,8 @@ class _DonorFormScreenState extends State<DonorFormScreen> {
 
   Widget _buildphoneno() {
     return TextFormField(
-      decoration: InputDecoration(labelText: 'Phoneno',suffixIcon: Icon(Icons.phone)),
+      decoration:
+          InputDecoration(labelText: 'Phoneno', suffixIcon: Icon(Icons.phone)),
       maxLength: 10,
       keyboardType: TextInputType.phone,
       validator: (String value) {
@@ -94,7 +96,8 @@ class _DonorFormScreenState extends State<DonorFormScreen> {
 
   Widget _buildAddress() {
     return TextFormField(
-      decoration: InputDecoration(labelText: 'Address',suffixIcon: Icon(Icons.my_location)),
+      decoration: InputDecoration(
+          labelText: 'Address', suffixIcon: Icon(Icons.my_location)),
       validator: (String value) {
         if (value.isEmpty) {
           return 'Address is required';
@@ -191,6 +194,7 @@ class _DonorFormScreenState extends State<DonorFormScreen> {
       ],
     );
   }
+
   Widget _dress() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -225,17 +229,16 @@ class _DonorFormScreenState extends State<DonorFormScreen> {
       ],
     );
   }
+
   Widget _buildother() {
     return TextFormField(
       decoration: InputDecoration(labelText: 'Other Items'),
       maxLength: 20,
-
       onSaved: (String value) {
         _others = value;
       },
     );
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -314,10 +317,10 @@ class _DonorFormScreenState extends State<DonorFormScreen> {
                               'Phone number': this._phoneno,
                               'Address': this._Address,
                               'Age': this._age,
-                              'Medicine':this._currentMedicine,
-                              'Food':this._currentFood,
-                              'Dress':this._currentDress,
-                              'Others':this._others,
+                              'Medicine': this._currentMedicine,
+                              'Food': this._currentFood,
+                              'Dress': this._currentDress,
+                              'Others': this._others,
                             }).catchError((e) {
                               print(e);
                             });

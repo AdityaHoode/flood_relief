@@ -30,7 +30,7 @@ class preparingforfood extends StatelessWidget {
       ),
       body: StreamBuilder(
         stream:
-            Firestore.instance.collection('preparing for flood').snapshots(),
+            FirebaseFirestore.instance.collection('preparing for flood').snapshots(),
         builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
           if (!snapshot.hasData) {
             return Center(child: Text('Loading...'));

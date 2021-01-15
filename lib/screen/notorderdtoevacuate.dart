@@ -55,6 +55,9 @@ class notorderedtoevacuate extends StatelessWidget {
                               fontWeight: FontWeight.bold,
                               color: Colors.pink),
                         ),
+                        SizedBox(
+                          height: 30,
+                        ),
                         Text(
                           '1)${mypost['1']}\n',
                           style: TextStyle(

@@ -77,7 +77,7 @@ class AdmindataPage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => Donordatapage()),
+                              builder: (context) => DonorDataPage()),
                         );
                       },
                       child: Text(

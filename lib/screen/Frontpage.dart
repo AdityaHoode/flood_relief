@@ -5,7 +5,6 @@ import 'package:flood_relief/screen/prec.dart';
 import 'package:flood_relief/screen/victimform.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'precautions.dart';
 
 class frontPage extends StatefulWidget {
   @override

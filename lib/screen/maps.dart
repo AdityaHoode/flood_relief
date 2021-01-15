@@ -40,7 +40,7 @@ class _FireMapState extends State<FireMap> {
 
   CameraPosition _position = _kInitialPosition;
   static final CameraPosition _kInitialPosition = const CameraPosition(
-    target: LatLng(40.7128,-74.0060),
+    target: LatLng(40.7128, -74.0060),
     zoom: 20,
   );
 
@@ -68,7 +68,9 @@ class _FireMapState extends State<FireMap> {
       },
     );
   }
-  List<Marker>allMarkers=[];
+
+  List<Marker> allMarkers = [];
+
   @override
   void initState() {
     // TODO: implement initState
@@ -77,35 +79,26 @@ class _FireMapState extends State<FireMap> {
     allMarkers.add(Marker(
         markerId: MarkerId('myMarker'),
         draggable: false,
-        onTap: (){
+        onTap: () {
           print('Marker Tapped');
         },
-        position: LatLng(12.9767,77.5713)
-
-    ));
+        position: LatLng(12.9767, 77.5713)));
     allMarkers.add(Marker(
         markerId: MarkerId('myMarker'),
         draggable: false,
-        onTap: (){
+        onTap: () {
           print('Marker Tapped');
         },
-        position: LatLng(13.1155, 77.6070)
-
-    ));
+        position: LatLng(13.1155, 77.6070)));
 
     allMarkers.add(Marker(
         markerId: MarkerId('myMarker'),
         draggable: false,
-        onTap: (){
+        onTap: () {
           print('Marker Tapped');
         },
-        position: LatLng(37.4147848,-122.0853393)
-
-    ));
-
-
+        position: LatLng(37.4147848, -122.0853393)));
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -137,7 +130,7 @@ class _FireMapState extends State<FireMap> {
         children: <Widget>[
           GoogleMap(
             initialCameraPosition:
-            CameraPosition(target: LatLng(40.7128,-74.0060), zoom: 20),
+                CameraPosition(target: LatLng(40.7128, -74.0060), zoom: 20),
             onMapCreated: _onMapCreated,
             myLocationEnabled: true,
             mapType: MapType.normal,

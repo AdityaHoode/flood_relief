@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class Donordatapage extends StatefulWidget {
+class DonorDataPage extends StatefulWidget {
   @override
-  _AdmindatapageState createState() => _AdmindatapageState();
+  _DonorDataPageState createState() => _DonorDataPageState();
 }
 
-class _AdmindatapageState extends State<Donordatapage> {
+class _DonorDataPageState extends State<DonorDataPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,159 +34,152 @@ class _AdmindatapageState extends State<Donordatapage> {
         ),
       ),
       body: StreamBuilder(
-        stream: Firestore.instance.collection('donor').snapshots(),
+        stream: FirebaseFirestore.instance.collection('donor').snapshots(),
         builder: (context, snapshot) {
           // ignore: missing_return
           if (!snapshot.hasData) {
             const Text('Loading');
+          } else if (snapshot.hasError) {
+            const Text('No data avaible right now');
           }
-            return Container(
-              decoration: BoxDecoration(
-
-                gradient: LinearGradient(
-                    colors: [Colors.lightGreenAccent, Colors.yellowAccent],
-                    begin: Alignment.centerRight,
-                    end: Alignment.centerLeft),
-              ),
-              child: ListView.builder(
-                // ignore: missing_return
-                itemCount: snapshot.data.documents.length,
-                itemBuilder: (context, index) {
-                  DocumentSnapshot mypost = snapshot.data.documents[index];
-                  return Stack(
-                    children: <Widget>[
-                      Column(
-                        children: <Widget>[
-                          Container(
-                            width: MediaQuery.of(context).size.width,
-                            height: 350.0,
-                            padding: EdgeInsets.only(top: 8.0, bottom: 8.0),
-                            child: Material(
-                              color: Colors.white,
-                              elevation: 14.0,
-                              shadowColor: Colors.grey,
-                              child: Center(
-                                child: Padding(
-                                  padding: EdgeInsets.all(8.0),
-                                  child: Column(
-                                    children: <Widget>[
-                                      Text(
-                                        'First Name:${mypost['Firstname']}',
-                                        style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.blueGrey),
-                                      ),
-                                      SizedBox(
-                                        height: 10.0,
-                                      ),
-                                      Text(
-                                        'Last Name:${mypost['Lastname']}',
-                                        style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.blueGrey),
-                                      ),
-                                      SizedBox(
-                                        height: 10.0,
-                                      ),
-                                      Text(
-                                        'Email:${mypost['Email']}',
-                                        style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.blueGrey),
-                                      ),
-                                      SizedBox(
-                                        height: 10.0,
-                                      ),
-                                      Text(
-                                        'Address:${mypost['Address']}',
-                                        style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.blueGrey),
-                                      ),
-                                      SizedBox(
-                                        height: 10.0,
-                                      ),
-                                      Text(
-                                        'Phone number:${mypost['Phone number']}',
-                                        style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.blueGrey),
-                                      ),
-                                      SizedBox(
-                                        height: 10.0,
-                                      ),
-                                      Text(
-                                        'Age:${mypost['Age']}',
-                                        style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.blueGrey),
-                                      ),
-                                      Text(
-                                        'Medicine:${mypost['Medicine']}',
-                                        style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.blueGrey),
-                                      ),
-                                      Text(
-                                        'Dress:${mypost['Dress']}',
-                                        style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.blueGrey),
-                                      ),
-                                      Text(
-                                        'Food:${mypost['Food']}',
-                                        style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.blueGrey),
-                                      ),
-                                      Text(
-                                        'Others:${mypost['Others']}',
-                                        style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.blueGrey),
-                                      ),
-
-                                    ],
-                                  ),
+          return Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(colors: [
+                Colors.limeAccent[400],
+                Colors.lightGreenAccent[400]
+              ], begin: Alignment.centerRight, end: Alignment.centerLeft),
+            ),
+            child: ListView.builder(
+              // ignore: missing_return
+              itemCount: snapshot.data.documents.length,
+              itemBuilder: (context, index) {
+                DocumentSnapshot mypost = snapshot.data.documents[index];
+                return Stack(
+                  children: <Widget>[
+                    Column(
+                      children: <Widget>[
+                        Container(
+                          width: MediaQuery.of(context).size.width,
+                          height: 350.0,
+                          padding: EdgeInsets.only(top: 8.0, bottom: 8.0),
+                          child: Material(
+                            color: Colors.white,
+                            elevation: 14.0,
+                            shadowColor: Colors.grey,
+                            child: Center(
+                              child: Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Column(
+                                  children: <Widget>[
+                                    Text(
+                                      'First Name:${mypost['Firstname']}',
+                                      style: TextStyle(
+                                          fontSize: 20.0,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.blueGrey),
+                                    ),
+                                    SizedBox(
+                                      height: 10.0,
+                                    ),
+                                    Text(
+                                      'Last Name:${mypost['Lastname']}',
+                                      style: TextStyle(
+                                          fontSize: 20.0,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.blueGrey),
+                                    ),
+                                    SizedBox(
+                                      height: 10.0,
+                                    ),
+                                    Text(
+                                      'Email:${mypost['Email']}',
+                                      style: TextStyle(
+                                          fontSize: 20.0,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.blueGrey),
+                                    ),
+                                    SizedBox(
+                                      height: 10.0,
+                                    ),
+                                    Text(
+                                      'Address:${mypost['Address']}',
+                                      style: TextStyle(
+                                          fontSize: 20.0,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.blueGrey),
+                                    ),
+                                    SizedBox(
+                                      height: 10.0,
+                                    ),
+                                    Text(
+                                      'Phone number:${mypost['Phone number']}',
+                                      style: TextStyle(
+                                          fontSize: 20.0,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.blueGrey),
+                                    ),
+                                    SizedBox(
+                                      height: 10.0,
+                                    ),
+                                    Text(
+                                      'Medicine:${mypost['Medicine']}',
+                                      style: TextStyle(
+                                          fontSize: 20.0,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.blueGrey),
+                                    ),
+                                    Text(
+                                      'Dress:${mypost['Dress']}',
+                                      style: TextStyle(
+                                          fontSize: 20.0,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.blueGrey),
+                                    ),
+                                    Text(
+                                      'Food:${mypost['Food']}',
+                                      style: TextStyle(
+                                          fontSize: 20.0,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.blueGrey),
+                                    ),
+                                    Text(
+                                      'Others:${mypost['Others']}',
+                                      style: TextStyle(
+                                          fontSize: 20.0,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.blueGrey),
+                                    ),
+                                  ],
                                 ),
                               ),
                             ),
                           ),
-                        ],
-                      ),
-                      Container(
-                        alignment: Alignment.topRight,
-                        padding: EdgeInsets.only(
-                          top: MediaQuery.of(context).size.height * .47,
-                          left: MediaQuery.of(context).size.height * .52,
                         ),
-                        child: Container(
-                          width: MediaQuery.of(context).size.width,
-                          child: CircleAvatar(
-                            backgroundColor: Colors.blue,
-                            child: Icon(
-                              Icons.star,
-                              color: Colors.white,
-                              size: 20.0,
-                            ),
+                      ],
+                    ),
+                    Container(
+                      alignment: Alignment.topRight,
+                      padding: EdgeInsets.only(
+                        top: MediaQuery.of(context).size.height * .47,
+                        left: MediaQuery.of(context).size.height * .52,
+                      ),
+                      child: Container(
+                        width: MediaQuery.of(context).size.width,
+                        child: CircleAvatar(
+                          backgroundColor: Colors.blue,
+                          child: Icon(
+                            Icons.star,
+                            color: Colors.white,
+                            size: 20.0,
                           ),
                         ),
-                      )
-                    ],
-                  );
-                },
-              ),
-            );
+                      ),
+                    )
+                  ],
+                );
+              },
+            ),
+          );
         },
       ),
     );

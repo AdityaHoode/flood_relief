@@ -36,7 +36,9 @@ class _PrecautionsState extends State<Precautions> {
         ),
         body: ListView(children: <Widget>[
           StreamBuilder(
-            stream: Firestore.instance.collection('precautions').snapshots(),
+            stream: FirebaseFirestore.instance
+                .collection('precautions')
+                .snapshots(),
             builder: (context, snapshot) {
               if (!snapshot.hasData) {
                 return Center(child: Text('Loading...'));

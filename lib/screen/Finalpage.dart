@@ -30,10 +30,9 @@ class Finalpage extends StatelessWidget {
       ),
       body: Container(
         decoration: BoxDecoration(
-            gradient:
-            LinearGradient(colors: [Colors.yellow, Colors.lightGreenAccent])),
+            gradient: LinearGradient(
+                colors: [Colors.yellow, Colors.lightGreenAccent])),
         child: ListView(
-
           children: <Widget>[
             Column(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -42,9 +41,10 @@ class Finalpage extends StatelessWidget {
                 SizedBox(
                   height: 100,
                 ),
-                Text('Data Saved',style: TextStyle(
-                  fontSize: 30
-                ),),
+                Text(
+                  'Data Saved',
+                  style: TextStyle(fontSize: 30),
+                ),
                 SizedBox(
                   height: 30,
                 ),
@@ -53,9 +53,10 @@ class Finalpage extends StatelessWidget {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => frontPage()));
                   },
-                  child: Text('Move to home',style: TextStyle(
-                    fontSize: 30
-                  ),),
+                  child: Text(
+                    'Move to home',
+                    style: TextStyle(fontSize: 30),
+                  ),
                   color: Colors.green,
                 )
               ],
