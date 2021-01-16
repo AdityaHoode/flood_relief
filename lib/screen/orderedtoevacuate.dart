@@ -19,17 +19,17 @@ class orderedtoevacuate extends StatelessWidget {
               width: 8,
             ),
             Text(
-              'FLOOD APP',
+              'Flood Relief',
               style: TextStyle(
                   color: Colors.black,
                   fontStyle: FontStyle.italic,
-                  fontSize: 35),
+                  fontSize: 25),
             ),
           ],
         ),
       ),
       body: StreamBuilder(
-        stream: Firestore.instance
+        stream: FirebaseFirestore.instance
             .collection('If you are ordered to evacuate')
             .snapshots(),
         builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
@@ -47,13 +47,16 @@ class orderedtoevacuate extends StatelessWidget {
                   return Container(
                     padding: EdgeInsets.all(10),
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Text(
-                          'If you are ordered to evacuate',
-                          style: TextStyle(
-                              fontSize: 25,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.orange),
+                        Center(
+                          child: Text(
+                            'If you are ordered to evacuate',
+                            style: TextStyle(
+                                fontSize: 25,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.orange),
+                          ),
                         ),
                         Text('\n'),
                         Text(

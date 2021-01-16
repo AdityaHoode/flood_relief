@@ -23,11 +23,11 @@ class prec extends StatelessWidget {
               width: 8,
             ),
             Text(
-              'FLOOD APP',
+              'Flood Relief',
               style: TextStyle(
                   color: Colors.black,
                   fontStyle: FontStyle.italic,
-                  fontSize: 35),
+                  fontSize: 25),
             ),
           ],
         ),
@@ -139,7 +139,8 @@ class prec extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => orderedtoevacuate()),
+                    MaterialPageRoute(
+                        builder: (context) => orderedtoevacuate()),
                   );
                 },
                 child: Text(

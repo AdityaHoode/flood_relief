@@ -36,11 +36,11 @@ class _LoginPageState extends State<LoginPage> {
               width: 8,
             ),
             Text(
-              'FLOOD APP',
+              'Flood Relief',
               style: TextStyle(
                   color: Colors.black,
                   fontStyle: FontStyle.italic,
-                  fontSize: 35),
+                  fontSize: 25),
             ),
           ],
         ),
@@ -59,6 +59,7 @@ class _LoginPageState extends State<LoginPage> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
+                  SizedBox(height: 20,),
                   Text(
                     '   ADMIN LOGIN',
                     style: TextStyle(

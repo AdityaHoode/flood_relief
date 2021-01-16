@@ -19,18 +19,19 @@ class preparingforfood extends StatelessWidget {
               width: 8,
             ),
             Text(
-              'FLOOD APP',
+              'Flood Relief',
               style: TextStyle(
                   color: Colors.black,
                   fontStyle: FontStyle.italic,
-                  fontSize: 35),
+                  fontSize: 25),
             ),
           ],
         ),
       ),
       body: StreamBuilder(
-        stream:
-            FirebaseFirestore.instance.collection('preparing for flood').snapshots(),
+        stream: FirebaseFirestore.instance
+            .collection('preparing for flood')
+            .snapshots(),
         builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
           if (!snapshot.hasData) {
             return Center(child: Text('Loading...'));
@@ -53,6 +54,9 @@ class preparingforfood extends StatelessWidget {
                             fontSize: 25,
                             fontWeight: FontWeight.bold,
                             color: Colors.green),
+                      ),
+                      SizedBox(
+                        height: 10,
                       ),
                       Text(
                         '1)${mypost['1']}\n',

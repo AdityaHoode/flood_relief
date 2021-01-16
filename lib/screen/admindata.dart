@@ -19,30 +19,24 @@ class AdmindataPage extends StatelessWidget {
               height: 50,
             ),
             SizedBox(
-              width: 1,
+              width: 8,
             ),
             Text(
-              'FLOOD APP',
+              'Flood Relief',
               style: TextStyle(
                   color: Colors.black,
                   fontStyle: FontStyle.italic,
-                  fontSize: 35),
+                  fontSize: 25),
             ),
           ],
         ),
         actions: <Widget>[
-          Container(
-              child: FlatButton(
-            color: Colors.cyanAccent,
-            onPressed: () {
-              AuthProvider().logOut();
-              Navigator.pop(context);
-            },
-            child: Text(
-              'Logout',
-              style: TextStyle(fontSize: 15),
-            ),
-          ))
+          IconButton(
+              icon: Icon(Icons.home),
+              onPressed: () {
+                AuthProvider().logOut();
+                Navigator.pop(context);
+              })
         ],
       ),
       body: Container(

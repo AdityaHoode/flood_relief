@@ -36,44 +36,36 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.red[50],
-      body: Container(
-        decoration: BoxDecoration(
-            gradient: LinearGradient(
-                colors: [Colors.purple[100], Colors.lightBlue[100]])),
-        child: FutureBuilder(
-          future: buildText(),
-          builder: (BuildContext context, AsyncSnapshot snapshot) {
-            if (snapshot.connectionState != ConnectionState.done) {
-              return Center(
-                child: Column(
-                  children: <Widget>[
-                    SizedBox(height: 400),
-                    CircularProgressIndicator(
-                      backgroundColor: Colors.black,
-                      strokeWidth: 15,
-                    ),
-                    SizedBox(height: 20),
-                    Text(
-                      'Loading',
-                      style: TextStyle(
-                        fontSize: 30,
-                        color: Colors.black,
+      body: Center(
+        child: Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  colors: [Colors.purple[100], Colors.lightBlue[100]])),
+          child: FutureBuilder(
+            future: buildText(),
+            builder: (BuildContext context, AsyncSnapshot snapshot) {
+              if (snapshot.connectionState != ConnectionState.done) {
+                return Center(
+                  child: Card(
+                    child: Container(
+                      child: CircularProgressIndicator(
+                        backgroundColor: Colors.black,
+                        strokeWidth: 15,
                       ),
                     ),
-                    Text("Please wait..."),
-                  ],
-                ),
-              );
-            } else {
-              return frontPage();
-            }
-          },
+                  ),
+                );
+              } else {
+                return frontPage();
+              }
+            },
+          ),
         ),
       ),
     );
   }
 
   Future buildText() {
-    return new Future.delayed(const Duration(seconds: 1));
+    return new Future.delayed(const Duration(seconds: 2));
   }
 }

@@ -32,11 +32,11 @@ class _frontPageState extends State<frontPage> {
                 width: 8,
               ),
               Text(
-                'FLOOD APP',
+                'Flood Relief',
                 style: TextStyle(
                     color: Colors.black,
                     fontStyle: FontStyle.italic,
-                    fontSize: 35),
+                    fontSize: 25),
               ),
             ],
           ),
@@ -66,7 +66,6 @@ class _frontPageState extends State<frontPage> {
                     height: 30,
                   ),
                   OutlineButton(
-                    highlightColor: Colors.blue,
                     borderSide: BorderSide(
                       color: Colors.red, //Color of the border
                       style: BorderStyle.solid, //Style of the border

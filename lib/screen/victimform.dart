@@ -18,7 +18,7 @@ class _VictimFormScreenState extends State<VictimFormScreen> {
   String _others;
   var _Medicine = ['Paracetamol', 'Cetrizine', 'ORS', 'Insulin', 'Others'];
   var _Food = ['Buiscuit', 'Fruits', 'Groceries', 'Others'];
-  var _Dress=['Topwear','Bottomwear','Blanket','Others'];
+  var _Dress = ['Topwear', 'Bottomwear', 'Blanket', 'Others'];
   String _currentFood;
   String _currentMedicine;
   String _currentDress;
@@ -56,7 +56,8 @@ class _VictimFormScreenState extends State<VictimFormScreen> {
 
   Widget _buildEmail() {
     return TextFormField(
-      decoration: InputDecoration(labelText: 'Email',suffixIcon:Icon(Icons.email) ),
+      decoration:
+          InputDecoration(labelText: 'Email', suffixIcon: Icon(Icons.email)),
       validator: (String value) {
         if (value.isEmpty) {
           return 'Email is required';
@@ -75,7 +76,8 @@ class _VictimFormScreenState extends State<VictimFormScreen> {
 
   Widget _buildphoneno() {
     return TextFormField(
-      decoration: InputDecoration(labelText: 'Phoneno',suffixIcon: Icon(Icons.phone)),
+      decoration:
+          InputDecoration(labelText: 'Phoneno', suffixIcon: Icon(Icons.phone)),
       maxLength: 10,
       keyboardType: TextInputType.phone,
       validator: (String value) {
@@ -91,7 +93,8 @@ class _VictimFormScreenState extends State<VictimFormScreen> {
 
   Widget _buildAddress() {
     return TextFormField(
-      decoration: InputDecoration(labelText: 'Address',suffixIcon:Icon(Icons.my_location)),
+      decoration: InputDecoration(
+          labelText: 'Address', suffixIcon: Icon(Icons.my_location)),
       validator: (String value) {
         if (value.isEmpty) {
           return 'Address is required';
@@ -118,9 +121,11 @@ class _VictimFormScreenState extends State<VictimFormScreen> {
       },
     );
   }
+
   Widget _medicine() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
         Text(
           'Medicine',
@@ -187,6 +192,7 @@ class _VictimFormScreenState extends State<VictimFormScreen> {
       ],
     );
   }
+
   Widget _dress() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -221,11 +227,11 @@ class _VictimFormScreenState extends State<VictimFormScreen> {
       ],
     );
   }
+
   Widget _buildother() {
     return TextFormField(
       decoration: InputDecoration(labelText: 'Other Items'),
       maxLength: 20,
-
       onSaved: (String value) {
         _others = value;
       },
@@ -250,20 +256,19 @@ class _VictimFormScreenState extends State<VictimFormScreen> {
               width: 8,
             ),
             Text(
-              'FLOOD APP',
+              'Flood Relief',
               style: TextStyle(
                   color: Colors.black,
                   fontStyle: FontStyle.italic,
-                  fontSize: 35),
+                  fontSize: 25),
             ),
           ],
         ),
       ),
-
       body: Container(
         decoration: BoxDecoration(
-            gradient:
-                LinearGradient(colors: [Colors.lightBlueAccent[100], Colors.green[200]])),
+            gradient: LinearGradient(
+                colors: [Colors.lightBlueAccent[100], Colors.green[200]])),
         child: ListView(children: <Widget>[
           Container(
             padding: EdgeInsets.all(8.0),
@@ -308,10 +313,10 @@ class _VictimFormScreenState extends State<VictimFormScreen> {
                               'Phone number': this._phoneno,
                               'Address': this._Address,
                               'Age': this._age,
-                              'Medicine':this._currentMedicine,
-                              'Food':this._currentFood,
-                              'Dress':this._currentDress,
-                              'Others':this._others,
+                              'Medicine': this._currentMedicine,
+                              'Food': this._currentFood,
+                              'Dress': this._currentDress,
+                              'Others': this._others,
                             }).catchError((e) {
                               print(e);
                             });
