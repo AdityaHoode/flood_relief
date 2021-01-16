@@ -1,16 +1,6 @@
 # flood_relief
 
-A new Flutter application.
+A mobile application built using flutter and firebase which takes number of requirements from flood victim and also takes the number of items that can be supplied from donor, so that the requirements can be monitored by the authorities and no resources are wasted.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The victim can also press the SOS button on the app,on doing so their location will be saved and they can be helped by security personnel.
