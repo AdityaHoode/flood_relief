@@ -289,15 +289,19 @@ class _VictimFormScreenState extends State<VictimFormScreen> {
                     _dress(),
                     _buildother(),
                     SizedBox(
-                      height: 50,
+                      height: 10,
                     ),
                     Container(
+                      width: double.infinity,
                       child: RaisedButton(
-                        color: Colors.white,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
+                        color: Colors.tealAccent[700],
                         child: Text(
                           'Submit',
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.grey[850],
                             fontSize: 16,
                           ),
                         ),

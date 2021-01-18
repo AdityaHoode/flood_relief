@@ -43,7 +43,7 @@ class prec extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               SizedBox(
-                height: 20,
+                height: 200,
               ),
               OutlineButton(
                 highlightColor: Colors.blue,
@@ -65,7 +65,7 @@ class prec extends StatelessWidget {
                   style: TextStyle(
                       color: Colors.black,
                       fontStyle: FontStyle.italic,
-                      fontSize: 25,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold),
                 ),
               ),
@@ -92,7 +92,7 @@ class prec extends StatelessWidget {
                   style: TextStyle(
                       color: Colors.black,
                       fontStyle: FontStyle.italic,
-                      fontSize: 25,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold),
                 ),
               ),
@@ -120,7 +120,7 @@ class prec extends StatelessWidget {
                   style: TextStyle(
                       color: Colors.black,
                       fontStyle: FontStyle.italic,
-                      fontSize: 25,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold),
                 ),
               ),
@@ -144,11 +144,11 @@ class prec extends StatelessWidget {
                   );
                 },
                 child: Text(
-                  'If you are ordered to evacuate',
+                  'If you have ordered to evacuate',
                   style: TextStyle(
                       color: Colors.black,
                       fontStyle: FontStyle.italic,
-                      fontSize: 25,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold),
                 ),
               ),
@@ -172,11 +172,11 @@ class prec extends StatelessWidget {
                   );
                 },
                 child: Text(
-                  'If you are not ordered to evacuate',
+                  'If you have not ordered to evacuate',
                   style: TextStyle(
                       color: Colors.black,
                       fontStyle: FontStyle.italic,
-                      fontSize: 25,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold),
                 ),
               ),

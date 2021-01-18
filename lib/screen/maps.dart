@@ -82,14 +82,14 @@ class _FireMapState extends State<FireMap> {
         onTap: () {
           print('Marker Tapped');
         },
-        position: LatLng(12.9767, 77.5713)));
+        position: LatLng(12.7687, 75.2071)));
     allMarkers.add(Marker(
         markerId: MarkerId('myMarker'),
         draggable: false,
         onTap: () {
           print('Marker Tapped');
         },
-        position: LatLng(13.1155, 77.6070)));
+        position: LatLng(12.9887, 75.2725)));
 
     allMarkers.add(Marker(
         markerId: MarkerId('myMarker'),
@@ -97,7 +97,7 @@ class _FireMapState extends State<FireMap> {
         onTap: () {
           print('Marker Tapped');
         },
-        position: LatLng(37.4147848, -122.0853393)));
+        position: LatLng(12.9141, 74.8560)));
   }
 
   @override

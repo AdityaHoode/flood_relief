@@ -51,22 +51,25 @@ class AdmindataPage extends StatelessWidget {
             Container(
               child: Column(
                 children: <Widget>[
-                  SizedBox(height: 30),
+                  SizedBox(height: 40),
                   Text(
-                    'ADMIN LOG IN',
+                    'DASHBOARD',
                     style: TextStyle(
                         fontSize: 25,
                         fontStyle: FontStyle.italic,
                         fontWeight: FontWeight.bold),
                   ),
                   SizedBox(
-                    height: 70,
+                    height: 130,
                   ),
                   Container(
                     height: 70,
+                    width: 300,
                     child: RaisedButton(
-                      color: Colors.lightBlueAccent,
-                      textColor: Colors.black,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(50.0)),
+                      color: Colors.amberAccent,
+                      textColor: Colors.grey[800],
                       onPressed: () {
                         Navigator.push(
                           context,
@@ -85,8 +88,12 @@ class AdmindataPage extends StatelessWidget {
                   ),
                   Container(
                     height: 70,
+                    width: 300,
                     child: RaisedButton(
-                      color: Colors.lightBlueAccent,
+                      textColor: Colors.grey[800],
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(50.0)),
+                      color: Colors.amberAccent,
                       onPressed: () {
                         Navigator.push(
                           context,
@@ -105,9 +112,12 @@ class AdmindataPage extends StatelessWidget {
                   ),
                   Container(
                     height: 70,
+                    width: 300,
                     child: RaisedButton(
-                      color: Colors.lightBlueAccent,
-                      textColor: Colors.black,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(50.0)),
+                      color: Colors.amberAccent,
+                      textColor: Colors.grey[800],
                       onPressed: () {
                         Navigator.push(
                           context,

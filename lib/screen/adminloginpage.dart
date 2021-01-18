@@ -57,17 +57,21 @@ class _LoginPageState extends State<LoginPage> {
           child: ListView(
             children: <Widget>[
               Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
-                  SizedBox(height: 20,),
-                  Text(
-                    '   ADMIN LOGIN',
-                    style: TextStyle(
-                        fontSize: 30,
-                        fontStyle: FontStyle.italic,
-                        fontWeight: FontWeight.w500),
+                  SizedBox(
+                    height: 50,
                   ),
-                  const SizedBox(height: 120.0),
+                  Text(
+                    'ADMIN LOGIN',
+                    style: TextStyle(
+                      fontSize: 30,
+                      fontStyle: FontStyle.italic,
+                      fontWeight: FontWeight.w500,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 200.0),
                   TextField(
                     controller: _emailController,
                     decoration: InputDecoration(hintText: "Enter email"),
@@ -78,9 +82,12 @@ class _LoginPageState extends State<LoginPage> {
                     obscureText: true,
                     decoration: InputDecoration(hintText: "Enter password"),
                   ),
-                  const SizedBox(height: 10.0),
+                  const SizedBox(height: 30.0),
                   RaisedButton(
-                    color: Colors.white,
+                    textColor: Colors.grey[800],
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(18.0)),
+                    color: Colors.pinkAccent[100],
                     child: Text(
                       "Login",
                       style:

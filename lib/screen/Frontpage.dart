@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flood_relief/screen/adminloginpage.dart';
 import 'package:flood_relief/screen/donorform.dart';
 import 'package:flood_relief/screen/maps.dart';
@@ -5,6 +7,8 @@ import 'package:flood_relief/screen/prec.dart';
 import 'package:flood_relief/screen/victimform.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+
+import 'package:hexcolor/hexcolor.dart';
 
 class frontPage extends StatefulWidget {
   @override
@@ -55,7 +59,7 @@ class _frontPageState extends State<frontPage> {
           Container(
             decoration: BoxDecoration(
                 gradient: LinearGradient(
-                    colors: [Colors.purple[100], Colors.lightBlue[100]])),
+                    colors: [HexColor("#0093E9"), HexColor("#80D0C7")])),
             padding: EdgeInsets.all(20),
             child: Center(
               child: Column(
@@ -63,16 +67,20 @@ class _frontPageState extends State<frontPage> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
                   SizedBox(
-                    height: 30,
+                    height: 130,
                   ),
+
                   OutlineButton(
                     borderSide: BorderSide(
-                      color: Colors.red, //Color of the border
+                      color: Colors.cyanAccent, //Color of the border
                       style: BorderStyle.solid, //Style of the border
-                      width: 4, //width of the border
+                      width: 3, //width of the border
                     ),
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(16.0))),
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(18.0),
+                      ),
+                    ),
                     onPressed: () {
                       Navigator.push(
                         context,
@@ -80,14 +88,46 @@ class _frontPageState extends State<frontPage> {
                       );
                     },
                     child: Text(
-                      'Precautions and measures',
+                      'Precautions and Measures',
                       style: TextStyle(
-                          color: Colors.black,
-                          fontStyle: FontStyle.italic,
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold),
+                        color: Colors.grey[200],
+                        fontStyle: FontStyle.italic,
+                        fontSize: 25,
+                      ),
                     ),
                   ),
+
+                  // Container(
+                  //   decoration: BoxDecoration(
+                  //     color: Colors
+                  //   ),
+                  //   child: RaisedButton(
+                  //     onPressed: () {},
+                  //     child: Ink(
+                  //       decoration: BoxDecoration(
+                  //           gradient: LinearGradient(
+                  //             colors: [Color(0xff374ABE), Color(0xff64B6FF)],
+                  //             begin: Alignment.centerLeft,
+                  //             end: Alignment.centerRight,
+                  //           ),
+                  //           borderRadius: BorderRadius.circular(30.0)),
+                  //       child: Container(
+                  //         constraints: BoxConstraints(
+                  //             maxWidth: 250.0, minHeight: 50.0),
+                  //         alignment: Alignment.center,
+                  //         child: Text(
+                  //           "Precautions",
+                  //           textAlign: TextAlign.center,
+                  //           style: TextStyle(
+                  //               color: Colors.white,
+                  //               fontSize: 20,
+                  //               fontStyle: FontStyle.italic),
+                  //         ),
+                  //       ),
+                  //     ),
+                  //   ),
+                  // ),
+
                   SizedBox(
                     height: 45,
                   ),
@@ -100,7 +140,7 @@ class _frontPageState extends State<frontPage> {
                         MaterialPageRoute(builder: (context) => FireMap()),
                       );
                     },
-                    color: Colors.brown,
+                    color: Colors.red[400],
                     textColor: Colors.white,
                     child: Column(
                       children: <Widget>[
@@ -111,11 +151,11 @@ class _frontPageState extends State<frontPage> {
                               color: Colors.white,
                               fontWeight: FontWeight.bold),
                         ),
-                        Text(
-                          '(Click once the SOS button\n on the map so your\n location is detected.)',
-                          style: TextStyle(fontSize: 12.5, color: Colors.white),
-                          textAlign: TextAlign.center,
-                        )
+                        // Text(
+                        //   '(Click once the SOS button\n on the map so your\n location is detected.)',
+                        //   style: TextStyle(fontSize: 12.5, color: Colors.white),
+                        //   textAlign: TextAlign.center,
+                        // )
                       ],
                     ),
                     padding: EdgeInsets.all(16),
@@ -127,9 +167,9 @@ class _frontPageState extends State<frontPage> {
                   OutlineButton(
                     highlightColor: Colors.blue,
                     borderSide: BorderSide(
-                      color: Colors.red, //Color of the border
+                      color: Colors.cyanAccent, //Color of the border
                       style: BorderStyle.solid, //Style of the border
-                      width: 4, //width of the border
+                      width: 3, //width of the border
                     ),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(16.0))),
@@ -143,7 +183,7 @@ class _frontPageState extends State<frontPage> {
                     child: Text(
                       'Victim',
                       style: TextStyle(
-                          color: Colors.black,
+                          color: Colors.grey[200],
                           fontStyle: FontStyle.italic,
                           fontSize: 25,
                           fontWeight: FontWeight.bold),
@@ -155,9 +195,9 @@ class _frontPageState extends State<frontPage> {
                   OutlineButton(
                     highlightColor: Colors.blue,
                     borderSide: BorderSide(
-                      color: Colors.red, //Color of the border
+                      color: Colors.cyanAccent, //Color of the border
                       style: BorderStyle.solid, //Style of the border
-                      width: 4, //width of the border
+                      width: 3, //width of the border
                     ),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(16.0))),
@@ -171,7 +211,7 @@ class _frontPageState extends State<frontPage> {
                     child: Text(
                       'Donor',
                       style: TextStyle(
-                          color: Colors.black,
+                          color: Colors.grey[200],
                           fontStyle: FontStyle.italic,
                           fontSize: 25,
                           fontWeight: FontWeight.bold),

@@ -293,15 +293,18 @@ class _DonorFormScreenState extends State<DonorFormScreen> {
                     _dress(),
                     _buildother(),
                     SizedBox(
-                      height: 100,
+                      height: 10,
                     ),
                     Container(
                       child: RaisedButton(
-                        color: Colors.white,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(18.0),
+                        ),
+                        color: Colors.pink[200],
                         child: Text(
                           'Submit',
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.grey[800],
                             fontSize: 16,
                           ),
                         ),

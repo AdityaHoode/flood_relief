@@ -62,7 +62,7 @@ class _ResuelocationsState extends State<Resuelocations> {
                       child: new Column(
                         children: [
                           Text(
-                            'latitude: ' +
+                            'Latitude: ' +
                                 document.data()['latitude'].toString(),
                             style: TextStyle(
                                 fontSize: 20.0,
@@ -73,7 +73,7 @@ class _ResuelocationsState extends State<Resuelocations> {
                             height: 10.0,
                           ),
                           Text(
-                            'longitude: ' +
+                            'Longitude: ' +
                                 document.data()['longitude'].toString(),
                             style: TextStyle(
                                 fontSize: 20.0,
